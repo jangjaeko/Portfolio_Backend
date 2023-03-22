@@ -17,3 +17,10 @@ testRef.get().then((querySnapshot) => {
     console.log(document.data());
   });
 });
+
+const testData = {
+  id: 1,
+  name: "testData",
+};
+
+db.collection("testData").doc(testData.id.toString()).set(testData);
